@@ -95,7 +95,7 @@ define("./service-worker.js",['./workbox-736ea6c1'], function (workbox) { 'use s
   * See https://goo.gl/2aRDsh
   */
 
-  self.addEventListener('message', event => {
+  self.addEventListener('message', 'https://appsdemo.service24.ci', event => {
     if (event.data && event.data.type === 'SKIP_WAITING') {
       self.skipWaiting();
     }
