@@ -533,7 +533,7 @@ class SettingsController extends Controller
 
         for ($i = 0; $i < 7; $i++) {
             if ($request->hasFile('ftimig'.$i)) {
-                chmod($images[$i], 0777);
+                chmod($images[$i], 0750);
                 //dd($request->all()['ftimig'.$i]);
                 if($i==0){
                     $imDemo = Image::make($request->all()['ftimig'.$i]->getRealPath())->fit(600, 600);
